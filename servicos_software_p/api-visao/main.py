@@ -10,7 +10,6 @@ app = FastAPI()
 print("Carregando modelo de visão...")
 classificador = pipeline("image-classification", model="google/vit-base-patch16-224")
 
-
 @app.post("/analisar")
 async def analisar_imagem(file: UploadFile = File(...)):
     # Lê a imagem
