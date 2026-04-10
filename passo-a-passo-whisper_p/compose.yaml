@@ -1,18 +1,16 @@
 services:
-  gradio-service:
-    build: 
+  gradio-json:
+    build:
       context: gradio-json
       dockerfile: Dockerfile
     ports:
-      - 7860:7860
-    volumes:
-      - /work
+      - "7860:7860"
+    depends_on:
+      - backend-json
 
-  backend-service:
+  backend-json:
     build:
       context: backend-json
       dockerfile: Dockerfile
     ports:
-      - 8080:8080
-    volumes:
-      - /code
+      - "8080:8080"
