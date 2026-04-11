@@ -33,3 +33,9 @@ async def transcrever_audio(file: UploadFile = File(...)):
             os.remove(caminho_temp)
     return { "texto" : texto }
 
+@app.route('/validar-cpf', methods=['POST'])
+def validar():
+    dados = request.get_json()
+    cpf = dados.get('cpf', '')
+    valido = validar_cpf(cpf)
+    return jsonify({'valido': valido, 'mensagem': 'válido' if valido else 'inválido'})
