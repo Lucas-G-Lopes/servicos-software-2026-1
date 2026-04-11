@@ -33,3 +33,24 @@ async def transcrever_audio(file: UploadFile = File(...)):
             os.remove(caminho_temp)
     return { "texto" : texto }
 
+def validar_cpf(cpf: str) -> bool:
+    # Remove caracteres não numéricos
+    cpf = ''.join(filter(str.isdigit, cpf))
+    
+    if len(cpf) != 11 or cpf == cpf[0] * 11:
+        return False
+    
+    # Calcula primeiro dígito
+    soma = sum(int(cpf[i]) * (10 - i) for i in range(9))
+    resto = soma % 11
+    dig1 = 0 if resto < 2 else 11 - resto
+    
+    if dig1 != int(cpf[9]):
+        return False
+    
+    # Calcula segundo dígito
+    soma = sum(int(cpf[i]) * (11 - i) for i in range(10))
+    resto = soma % 11
+    dig2 = 0 if resto < 2 else 11 - resto
+    
+    return dig2 == int(cpf[10])
