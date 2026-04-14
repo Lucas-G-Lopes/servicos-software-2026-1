@@ -15,6 +15,7 @@ Nome: Mariana Mazzali Stauch RA: 25.80058-2
 Nome: Pedro Henrique Reinato Mattia RA: 25.80055-8
 
 
+
 Esta aplicacao foi desenvolvida com dois containers Docker:
 
 - `frontend`: interface web em Gradio para entrada do CPF e exibicao do resultado.
