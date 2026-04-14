@@ -4,9 +4,13 @@ Projeto final da disciplina de Servicos de Software.
 
 Integrantes:
 Nome: Felipe Jaenes Marcilio RA: 25.80176-2
+
 Nome: Gabriel Ferreira Fiorotti RA: 16.00595-3
+
 Nome: Lucas Garcia Lopes RA: 25.80183-8
+
 Nome: Mariana Mazzali Stauch RA: 25.80058-2
+
 Nome: Pedro Henrique Reinato Mattia RA: 25.80055-8
 
 
